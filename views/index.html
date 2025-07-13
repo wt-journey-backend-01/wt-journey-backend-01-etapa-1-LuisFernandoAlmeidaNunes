@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dev Burger </title>
+</head>
+<body>
+    <a href="/api/lanches">
+        <h1>Cardápio</h1>
+    </a>
+    <h1>Crie seu lanche</h1>
+    <div id="sugestaoLanche">
+        <form action="/sugestao" method="GET">
+            <p>Identificação</p>
+            <label > Seu nome: </label><input type="text" name = "nome" placeholder="Nome"><br>
+            <p> Faça sua sugestão</p>
+            <label > lista de ingredientes do lanche: </label><input type="text" name="ingredientes" placeholder="digite os ingredientes separados apenas por espaço"><br><br>
+            <button type="submit" > Enviar</button>
+        </form>
+    </div>
+    <a href="/contato"><p>Nos dê uma sugestão</p></a>
+</body>
+</html>

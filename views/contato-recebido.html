@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Burger</title>
+</head>
+<body>
+    <div id="mensagem"></div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nome = params.get('nome');
+        const email = params.get('email');
+        const assunto = params.get('assunto');
+        const mensagem = params.get('mensagem');
+
+        const msg = document.getElementById('mensagem');
+        msg.innerText = `Obrigado, ${nome}!\nEntrarmos em contato por ${email} \nAssunto: ${assunto}\nMensagem: ${mensagem}`;
+    </script>
+    <a href="/"><p>retornar a página inicial</p></a>
+</body>
+</html>

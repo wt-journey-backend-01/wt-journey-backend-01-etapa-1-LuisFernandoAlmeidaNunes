@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dev Burger</title>
+</head>
+<body>
+    <div id="mensagem"></div>
+    <script>
+        // Obtém os parâmetros da URL
+        const params = new URLSearchParams(window.location.search);
+        const nome = params.get('nome');
+        const ingredientes = params.get('ingredientes');
+
+        // Seleciona o elemento onde a mensagem será exibida
+        const msgElement = document.getElementById('mensagem');
+
+        // Constrói a mensagem a ser exibida
+        let mensagemTexto = '';
+        if (nome && ingredientes) {
+            mensagemTexto = `Obrigado, ${nome}!\nSua sugestão foi: ${ingredientes}`;
+        } else if (nome) {
+            mensagemTexto = `Obrigado, ${nome}!\nNão recebemos sua sugestão de ingredientes.`;
+        } else if (ingredientes) {
+            mensagemTexto = `Obrigado!\nSua sugestão de ingredientes foi: ${ingredientes}`;
+        } else {
+            mensagemTexto = `Obrigado pela sua visita! Não recebemos dados do formulário.`;
+        }
+
+        // Define o texto no elemento
+        msgElement.innerText = mensagemTexto;
+    </script>
+    <a href="/"><p>retornar para página inicial</p></a>
+</body>
+</html>
